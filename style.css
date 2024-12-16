@@ -162,3 +162,14 @@ footer a:hover {
 .footer-container span{
     color: #ffffff;
 }
+
+/* Carrossel de Imgs */
+article img {
+    display: none; /* Oculta todas as imagens por padrão */
+    width: 100%; /* Garante que as imagens se ajustem ao container */
+    height: auto;
+}
+
+article img.active {
+    display: block; /* Exibe apenas a imagem ativa */
+}

@@ -46,17 +46,23 @@
         <h2>NOSSAS MODALIDADES</h2>
         <div class="modalidades">
             <article>
-                <img src="imgs/muaythai.jpeg" alt="Muay Thai">
+                <img src="imgs/MuayThaiCapa.jpg" alt="Muay Thai">
+                <img src="imgs/MuayThaiCapa2.jpg" alt="Muay Thai2">
+                <img src="imgs/muaythai.jpeg" alt="Muay Thai3">
                 <h3>Muay Thai</h3>
                 <p>Segunda-Feira das 20h30 às 22h e Quarta-Feira das 19h às 20h30.</p>
                 <p>Transforme seu corpo e sua mente com o Muay Thai! Aqui, você vai aprender técnicas de combate eficientes, ganhar resistência física e mental, e ainda melhorar sua saúde enquanto faz amigos. Seja para defesa pessoal, condicionamento ou competição, nosso treino te leva a outro nível. Venha dar o primeiro passo!</p>
             </article>
+
             <article>
                 <img src="imgs/jiujitsu.jpeg" alt="Jiu-Jitsu">
+                <img src="imgs/JiuJitsuCapa.jpg" alt="Jiu-Jitsu2">
+                <img src="imgs/JiuJitsuCapa2.jpg" alt="Jiu-Jitsu3">
                 <h3>Jiu-Jitsu</h3>
                 <p>Terça-Feira das 20h30 às 22h e Quinta-Feira das 20h30 às 22h.</p>
                 <p>Domine a arte de usar a técnica acima da força! No Jiu-Jitsu, você aprende a controlar situações com estratégia, foco e disciplina. Nossos treinos são perfeitos para quem busca autoconfiança, controle emocional e um estilo de vida saudável. Prepare-se para superar seus limites!</p>
             </article>
+
             <article>
                 <img src="imgs/jj kids 2.jpeg" alt="Jiu-Jitsu Kids">
                 <h3>Jiu-Jitsu Kids</h3>
@@ -76,6 +82,27 @@
         <p><i>Black Lotus Vila Formosa - Todos os direitos reservados.</i></p>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const articles = document.querySelectorAll('.modalidades article');
+
+        articles.forEach(article => {
+            const images = article.querySelectorAll('img');
+            let currentIndex = 0;
+
+            // Define a primeira imagem como ativa inicialmente
+            images[currentIndex].classList.add('active');
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 4000); // Troca a imagem a cada 3 segundos
+        });
+    });
+</script>
+
 
 </body>
 </html>
